@@ -1,0 +1,488 @@
+1) Button Templates:
+
+"message": {
+      "type":"template",
+      "payload":{
+        "template_type":"button",
+        "text":"What do you want to do next?",
+	"subText": "Choose an option below...",
+        "buttons":[
+          {
+            "type":"web_url",
+            "url":"https://petersapparel.parseapp.com",
+            "title":"Show Website"
+          },
+          {
+            "type":"postback",
+            "title":"Start Chatting",
+            "payload":"USER_DEFINED_PAYLOAD"
+          }
+        ]
+      }
+}
+
+
+2.1) Quick Replies (Text Only):
+
+"message":{
+    "type":"template",
+    "payload":{
+            "template_type":"quick_replies",
+	    "text":"Pick a color:",
+	    "quick_replies":[
+	      {
+		"content_type":"text",
+		"title":"Red",
+		"payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
+	      },
+	      {
+		"content_type":"text",
+		"title":"Green",
+		"payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_GREEN"
+	      }
+	    ]
+	}
+  }
+
+Quick Replies (Text and Image):
+
+ var message = {
+    "type":"template",
+    "payload":{
+	    "text":"Pick a color:",
+		"template_type":"quick_replies",
+	    "quick_replies":[
+	      {
+		"content_type":"text",
+		"title":"Red",
+		"payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED",
+		"image_url": "https://static.pexels.com/photos/416458/pexels-photo-416458.jpeg",
+	      },
+	      {
+		"content_type":"text",
+		"title":"Green",
+		"payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_GREEN",
+		"image_url": "https://static.pexels.com/photos/46239/salmon-dish-food-meal-46239.jpeg",
+	      }
+	    ]
+	}    
+}
+print(JSON.stringify(message));        
+
+3) List Template:
+
+"message": {
+        "type": "template",
+        "payload": {
+            "template_type": "list",
+            "elements": [
+                {
+                    "title": "Classic T-Shirt Collection",
+                    "image_url": "https://peterssendreceiveapp.ngrok.io/img/collection.png",
+                    "subtitle": "See all our colors",
+                    "default_action": {
+                        "type": "web_url",
+                        "url": "https://peterssendreceiveapp.ngrok.io/shop_collection",
+                        "messenger_extensions": true,
+                        "webview_height_ratio": "tall",
+                        "fallback_url": "https://peterssendreceiveapp.ngrok.io/"
+                    },
+                    "buttons": [
+                        {
+                            "title": "View",
+                            "type": "web_url",
+                            "url": "https://peterssendreceiveapp.ngrok.io/collection",
+                            "messenger_extensions": true,
+                            "webview_height_ratio": "tall",
+                            "fallback_url": "https://peterssendreceiveapp.ngrok.io/"                        
+                        }
+                    ]
+                },
+                {
+                    "title": "Classic White T-Shirt",
+                    "image_url": "https://peterssendreceiveapp.ngrok.io/img/white-t-shirt.png",
+                    "subtitle": "100% Cotton, 200% Comfortable",
+                    "default_action": {
+                        "type": "web_url",
+                        "url": "https://peterssendreceiveapp.ngrok.io/view?item=100",
+                        "messenger_extensions": true,
+                        "webview_height_ratio": "tall",
+                        "fallback_url": "https://peterssendreceiveapp.ngrok.io/"
+                    },
+                    "buttons": [
+                        {
+                            "title": "Shop Now",
+                            "type": "web_url",
+                            "url": "https://peterssendreceiveapp.ngrok.io/shop?item=100",
+                            "messenger_extensions": true,
+                            "webview_height_ratio": "tall",
+                            "fallback_url": "https://peterssendreceiveapp.ngrok.io/"                        
+                        }
+                    ]                
+                },
+                {
+                    "title": "Classic Blue T-Shirt",
+                    "image_url": "https://peterssendreceiveapp.ngrok.io/img/blue-t-shirt.png",
+                    "subtitle": "100% Cotton, 200% Comfortable",
+                    "default_action": {
+                        "type": "web_url",
+                        "url": "https://peterssendreceiveapp.ngrok.io/view?item=101",
+                        "messenger_extensions": true,
+                        "webview_height_ratio": "tall",
+                        "fallback_url": "https://peterssendreceiveapp.ngrok.io/"
+                    },
+                    "buttons": [
+                        {
+                            "title": "Shop Now",
+                            "type": "web_url",
+                            "url": "https://peterssendreceiveapp.ngrok.io/shop?item=101",
+                            "messenger_extensions": true,
+                            "webview_height_ratio": "tall",
+                            "fallback_url": "https://peterssendreceiveapp.ngrok.io/"                        
+                        }
+                    ]                
+                },
+                {
+                    "title": "Classic Black T-Shirt",
+                    "image_url": "https://peterssendreceiveapp.ngrok.io/img/black-t-shirt.png",
+                    "subtitle": "100% Cotton, 200% Comfortable",
+                    "default_action": {
+                        "type": "web_url",
+                        "url": "https://peterssendreceiveapp.ngrok.io/view?item=102",
+                        "messenger_extensions": true,
+                        "webview_height_ratio": "tall",
+                        "fallback_url": "https://peterssendreceiveapp.ngrok.io/"
+                    },
+                    "buttons": [
+                        {
+                            "title": "Shop Now",
+                            "type": "web_url",
+                            "url": "https://peterssendreceiveapp.ngrok.io/shop?item=102",
+                            "messenger_extensions": true,
+                            "webview_height_ratio": "tall",
+                            "fallback_url": "https://peterssendreceiveapp.ngrok.io/"                        
+                        }
+                    ]                
+                }
+            ],
+             "buttons": [
+                {
+                    "title": "View More",
+                    "type": "postback",
+                    "payload": "payload"                        
+                }
+            ]  
+        }
+}
+
+
+4) Error Template(Error, Warning, Validation):
+
+"message":{
+	"type":"error",
+	"payload":{
+            "color": "#000000",
+            "text": "Optional text that appears within the attachment",
+        }
+ }
+
+
+5) Attachment Template Audio/Video/Image/Link:
+
+"message":{
+	"type":"image/audio/video/link",
+	"payload":{
+            "url": "component Url"
+        }
+ }
+
+6) Text Message: (Default)
+
+{
+"text" : "message"
+}
+
+var message = {
+    "type": 'message',
+    "payload": {
+        "color":"#009dab",
+        "text":"My video",
+        "videoUrl":"http://techslides.com/demos/sample-videos/small.mp4"
+    }
+}
+
+7)
+   var message = {
+    "type": 'template',
+    "payload": {
+        "template_type": 'carousel',
+        "elements": [{
+            "title": "Welcome to Peter\'s Hats1",
+            "image_url": "https://previews.123rf.com/images/rez_art/rez_art1405/rez_art140500072/28632615-three-beef-tacos-with-cheese-lettuce-and-tomatos-Stock-Photo-taco.jpg",
+            "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "default_action": {
+                "type": "web_url",
+                "url": "https://peterssendreceiveapp.ngrok.io/view?item=103"
+				//or
+				//"type": "postback",
+                //"title": "discard",
+                //"payload":"clear payload"
+            },
+            "buttons": [{
+                "type": "postback",
+                "title": "Buy now",
+                "payload": "DEVELOPER_DEFINED_PAYLOAD_0"
+            }, {
+                "type": "postback",
+                "title": "Show more like this",
+                "payload": "DEVELOPER_DEFINED_PAYLOAD_1"
+            }]
+        },
+		{
+            "title": "Welcome to Peter\'s Hats2",
+            "image_url": "https://static.pexels.com/photos/46239/salmon-dish-food-meal-46239.jpeg",
+            "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "default_action": {
+                "type": "web_url",
+                "url": "https://peterssendreceiveapp.ngrok.io/view?item=103"
+            },
+            "buttons": [{
+                "type": "postback",
+                "title": "Buy now",
+                "payload": "DEVELOPER_DEFINED_PAYLOAD_0"
+            }, {
+                "type": "postback",
+                "title": "Show more like this",
+                "payload": "DEVELOPER_DEFINED_PAYLOAD_1"
+            }]
+        },{
+            "title": "Welcome to Peter\'s Hats3",
+            "image_url": "https://previews.123rf.com/images/rez_art/rez_art1405/rez_art140500072/28632615-three-beef-tacos-with-cheese-lettuce-and-tomatos-Stock-Photo-taco.jpg",
+            "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "default_action": {
+                "type": "web_url",
+                "url": "https://peterssendreceiveapp.ngrok.io/view?item=103"
+            },
+            "buttons": [{
+                "type": "postback",
+                "title": "Buy now",
+                "payload": "DEVELOPER_DEFINED_PAYLOAD_0"
+            }, {
+                "type": "postback",
+                "title": "Show more like this",
+                "payload": "DEVELOPER_DEFINED_PAYLOAD_1"
+            }]
+        },{
+            "title": "Welcome to Peter\'s Hats4",
+            "image_url": "https://static.pexels.com/photos/416458/pexels-photo-416458.jpeg",
+            "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "default_action": {
+                "type": "web_url",
+                "url": "https://peterssendreceiveapp.ngrok.io/view?item=103"
+            },
+            "buttons": [{
+                "type": "postback",
+                "title": "Buy now",
+                "payload": "DEVELOPER_DEFINED_PAYLOAD_0"
+            }, {
+                "type": "postback",
+                "title": "Show more like this",
+                "payload": "DEVELOPER_DEFINED_PAYLOAD_1"
+            }]
+        }]
+    }
+}
+print(JSON.stringify(message));   
+
+
+8)
+PieChart Template:
+
+var message = {
+    "type": "template",
+    "payload": {
+        "template_type": "piechart",
+        "elements": [{
+                "title": "Travel",
+                "value": "1089.52",
+                "currency":"$"
+				
+            },
+            {
+                "title": "Food",
+                "value": "521.19",
+                 "currency":"$"
+            },
+            {
+                "title": "Entertainement",
+                "value": "410.89",
+                 "currency":"$"
+            },
+			{
+                "title": "Others",
+                "value": "834.11",
+                 "currency":"$"
+            }
+        ],
+		speech_hint:"You spent $2855.71 from your account. Here is the breakup.",
+		text:"You spent $2855.71 from your account. Here is the breakup."
+    }
+};
+
+print(JSON.stringify(message));
+
+
+
+9)(i) Table template for 2 columns:
+var message = {
+    "type": "template",
+    "payload": {
+        "template_type": "table",
+		"text":"You have $1234.8 in your accounts",
+        "data": {
+            "headers": [
+                {
+                    "title": "Description",
+                    "percentage": 70,
+                    "alignment": "left"                    
+                },
+                {
+                    "title": "Amount",
+                    "percentage": 30,
+                    "alignment": "right"                    
+                }
+            ],
+            "rows": [
+                ["At walmart", "$12.00"],
+                ["From ATM", "$200.00"],
+                ["---"],
+                ["At Restaturant", "$250.00"],
+                ["At Spar", "$650.00"]
+            ]
+        }
+    }
+};
+print(JSON.stringify(message));
+
+9) (ii) Table template for 4 columns:
+var message = {
+    "type": "template",
+    "payload": {
+        "template_type": "table",
+		"text":"You have $1234.8 in your accounts",
+		"speech_hint":"You have $ 1234.8 in your account. Here is the breakup.",
+        "data": {
+            "headers": [
+                {
+                    "title": "S.No",
+                    "percentage": 14,
+                    "alignment": "left"
+                },
+                {
+                    "title": "Description",
+                    "percentage": 40,
+                    "alignment": "left"                    
+                },
+                {
+                    "title": "Category",
+                    "percentage": 24,
+                    "alignment": "left"                    
+                },
+                {
+                    "title": "Amount",
+                    "percentage": 22,
+                    "alignment": "right"                    
+                }
+            ],
+            "rows": [
+                ["1", "At walmart", "Debit", "$12.00"],
+                ["2", "From ATM", "Debit", "$200.00"],
+                ["---"],
+                ["3", "At Restaturant", "Debit", "$250.00"],
+                ["4", "At Spar", "Debit", "$650.00"]
+            ]
+        }
+    }
+};
+print(JSON.stringify(message));
+
+10) bar chart (vertical)
+var message = {
+    "type": "template",
+    "payload": {
+        "template_type": "barchart",
+		"headers": ['date','Travel','Food'],
+        "elements": [{
+                "title": "JAN 01",
+                "values": [1000,400]
+				
+            },
+            {
+                "title": "JAN 10",
+                "values": [1170, 460]
+				
+            },
+			{
+                "title": "JAN 20",
+                "values": [ 660, 1120]
+				
+            },
+			{
+                "title": "JAN 30",
+                "values": [1030, 540]
+				
+            },
+			{
+                "title": "Feb 10",
+                "values": [780, 640]
+				
+            }
+        ],
+		speech_hint:"You have $1234 in your accounts. Here is your balance looks like this.",
+		text:"You have $1234 in your accounts. Here is your balance looks like this."
+    }
+};
+
+print(JSON.stringify(message));
+
+
+
+11) Line chart
+
+var message = {
+    "type": "template",
+    "payload": {
+        "template_type": "linechart",
+		"headers": ['date','Travel','Food'],
+        "elements": [{
+                "title": "JAN 01",
+                "values": [1000,400]
+				
+            },
+            {
+                "title": "JAN 10",
+                "values": [1170, 460]
+				
+            },
+			{
+                "title": "JAN 20",
+                "values": [ 660, 1120]
+				
+            },
+			{
+                "title": "JAN 30",
+                "values": [1030, 540]
+				
+            },
+			{
+                "title": "Feb 10",
+                "values": [780, 640]
+				
+            }
+        ],
+		speech_hint:"You have $1234 in your accounts. Here is your balance looks like this.",
+		text:"You have $1234 in your accounts. Here is your balance looks like this."
+    }
+};
+
+print(JSON.stringify(message));

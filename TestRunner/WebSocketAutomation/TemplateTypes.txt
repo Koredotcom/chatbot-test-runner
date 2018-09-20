@@ -1,0 +1,141 @@
+Template : Quick Replies
+
+{
+  "type": "bot_response",
+  "from": "bot",
+  "message": [
+    {
+      "type": "text",
+      "component": {
+        "type": "template",
+        "payload": {
+          "type": "template",
+          "payload": {
+            "template_type": "quick_replies",
+            "text": "The value you entered seems to be ambiguous. Tell me the option you would like to choose. \n",
+            "quick_replies": [
+              {
+                "content_type": "text",
+                "title": "Mango fruit",
+                "payload": "Mango fruit"
+              },
+              {
+                "content_type": "text",
+                "title": "Apple fruit",
+                "payload": "Apple fruit"
+              },
+              {
+                "content_type": "text",
+                "title": "test Grapes fruit",
+                "payload": "test Grapes fruit"
+              },
+              {
+                "content_type": "text",
+                "title": "orange fruit",
+                "payload": "orange fruit"
+              }
+            ]
+          }
+        }
+      },
+      "cInfo": {
+        "body": "The value you entered seems to be ambiguous. Tell me the option you would like to choose. \r\n  \r\n \r\n a) Mango fruit \r\n b) Apple fruit \r\n c) test Grapes fruit \r\n d) orange fruit \r\n"
+      }
+    }
+  ],
+  "messageId": "ms-9da1e4a4-2373-57c4-9c74-450589da1100",
+  "botInfo": {
+    "chatBot": "ListOfValues",
+    "taskBotId": "st-9db1c67a-6b66-546a-a497-0e8ce13cb218"
+  },
+  "createdOn": "2017-11-27T08:19:16.568Z",
+  "icon": "https://pilot-bots.kore.ai/api/getMediaStream/market/f-65d5480f-9ecf-53c3-bce4-ecc5443f8792.png",
+  "contextId": "dcx-2f3f6e6b-b5ab-5f3a-9c57-d1f7724f325c",
+  "usedtime": 61,
+  "traceId": "f684ef94884546d9"
+}
+
+
+Template 2 : Button
+
+{
+  "type": "bot_response",
+  "from": "bot",
+  "message": [
+    {
+      "type": "text",
+      "component": {
+        "type": "template",
+        "payload": {
+          "type": "template",
+          "payload": {
+            "template_type": "button",
+            "text": "Select an option.",
+            "buttons": [
+              {
+                "type": "postback",
+                "title": "Select credit card",
+                "payload": "Select credit card"
+              },
+              {
+                "type": "postback",
+                "title": "Credit Card FAQs",
+                "payload": "Credit Card FAQs"
+              }
+            ]
+          }
+        }
+      },
+      "cInfo": {
+        "body": "Select an option. \r\n\r\n a) Select credit card \r\n b) Credit Card FAQs \r\n"
+      }
+    }
+  ],
+  "messageId": "ms-3896a14a-fcbf-52a2-82d7-75fded0a6107",
+  "botInfo": {
+    "chatBot": "Regression Issues",
+    "taskBotId": "st-42ad24e6-c796-5aae-bf84-bb4a886ebc64"
+  },
+  "createdOn": "2017-11-27T08:00:35.450Z",
+  "icon": "https://pilot-bots.kore.ai/api/getMediaStream/market/f-546a975c-8395-510b-a93a-991e6bd9d7e2.png",
+  "usedtime": 6609,
+  
+  "traceId": "ae2051b6bde5b84f"
+}
+
+
+
+
+Template 3 : Plain text.
+
+{
+  "type": "bot_response",
+  "from": "bot",
+  "message": [
+    {
+      "type": "text",
+      "component": {
+        "type": "text",
+        "payload": {
+          "text": "Please provide ur list of values\n"
+        }
+      },
+      "cInfo": {
+        "body": "Please provide ur list of values\n"
+      }
+    }
+  ],
+  "messageId": "ms-d8a5698d-3dba-5cd4-8e3e-219a3de25a35",
+  "botInfo": {
+    "chatBot": "ListOfValues",
+    "taskBotId": "st-9db1c67a-6b66-546a-a497-0e8ce13cb218"
+  },
+  "createdOn": "2017-11-27T08:19:13.013Z",
+  "icon": "https://pilot-bots.kore.ai/api/getMediaStream/market/f-65d5480f-9ecf-53c3-bce4-ecc5443f8792.png",
+  "contextId": "dcx-2f3f6e6b-b5ab-5f3a-9c57-d1f7724f325c",
+  "usedtime": 3931,
+  
+  "traceId": "f684ef94884546d9"
+}
+
+

@@ -1,0 +1,1926 @@
+{
+	"botName": "DialogRegSuite",
+	"botId": "st-d47395e0-2684-5178-84be-ee5cd882c018",
+	"testCases": [
+		{
+			"discardBefore":true,
+				"name": "Turning developer mode off",
+				"messages": [{
+					"input": "Cheat developer off",
+					"outputs": [{
+					"contains": "Developer flag is turned off now\r\nto turn on use \"cheat developer on\"\r\nto reset use \"cheat developer reset\""
+					}]
+	}]
+		},
+	{
+	    "discardBefore":true,
+			"name": "TestCase1 - Checking Auto transition at script node based on if condition.",
+			"messages": [{
+				"input": "Script transition",
+				"outputs": [
+				  "Provide your color\n"
+			         ]
+			},
+		{
+		      "input": "Red",
+			  "outputs": [{
+				  "contains": " Color entered is &quot;Red&quot;\n"
+				  },
+					{
+					"contains": "Enter the City\n"
+					}]
+		  },
+          {
+				"input": "Hyderabad",
+				"outputs": [
+				  "City entered is Hyderabad\n"
+			         ]
+		}]
+		}, 
+		{
+		"discardBefore":true,
+			"name": "TestCase2- Checking Auto transition at script node based on else if condition.",
+			"messages": [{
+				"input": "Script transition",
+				"outputs": [
+				  "Provide your color\n"
+			    ]
+		},
+		{
+		      "input": "Blue",
+			  "outputs": [{
+				  "contains": " Color entered is &quot;Blue&quot;\n"
+				    },
+					{
+					"contains": "Enter the item "
+					}]
+		  },
+		  {
+				"input": "Apple",
+				"outputs": [
+				  " Item selected is &quot;Apple&quot;\n"
+			     ]
+			}]
+		},
+		{
+		"discardBefore":true,
+			"name": "TestCase3 - Checking Auto transition at script node based on else condition.",
+			"messages": [{
+				"input": "Script transition",
+				"outputs": [
+				  "Provide your color\n"
+			    ]
+		},
+		{
+		      "input": "Black",
+			  "outputs": [{
+				  "contains": " Color entered is &quot;Black&quot;\n"
+				    },
+					{
+					"contains": "Success\n"
+					}]
+		      }]
+	      },
+         {
+	        "discardBefore":true,
+			"name": "TestCase4 - Checking Auto transition at Script node for if condition based on if condition at Service node.",
+			"messages": [
+			{
+				"input": "service transition",
+				"outputs": [
+				  "Enter the location\n"
+			         ]
+			},
+		   {
+		      "input": "Hyderabad",
+			  "outputs": [
+			     {
+				  "contains": "Location entered is &quot;Hyderabad, Telangana, India&quot;\n"
+				 },
+				 {
+				  "contains": "Provide your color\n"
+				 }]
+		  },
+          {
+		      "input": "Red",
+			  "outputs": [{
+				  "contains": " Color entered is &quot;Red&quot;\n"
+				  },
+					{
+					"contains": "Enter the City\n"
+					}]
+		  },
+          {
+				"input": "Jaipur",
+				"outputs": [
+				  "City entered is Jaipur\n"
+			         ]
+		}]
+		}, 
+		{
+		  "discardBefore":true,
+			"name": "TestCase5 - Auto transition at Script node for else if condition based on if condition at Service node.",
+			"messages": [{
+				"input": "service transition",
+				"outputs": [
+				  "Enter the location\n"
+			         ]
+			},
+		{
+		      "input": "Hyderabad",
+			  "outputs": [{
+				  "contains": "Location entered is &quot;Hyderabad, Telangana, India&quot;\n"
+				  },
+					{
+					"contains": "Provide your color\n"
+					}]
+		  },
+          {
+		      "input": "Blue",
+			  "outputs": [{
+				  "contains": " Color entered is &quot;Blue&quot;\n"
+				    },
+					{
+					"contains": "Enter the item"
+					}]
+		  },
+		  {
+				"input": "Apple",
+				"outputs": [
+				  " Item selected is &quot;Apple&quot;\n"
+			     ]
+			}]
+		}, 
+		{
+		     "discardBefore":true,
+			"name": "TestCase6 - Auto transition at Script node for else condition based on if condition at Service node.",
+			"messages": [{
+				"input": "service transition",
+				"outputs": [
+				  "Enter the location\n"
+			         ]
+			},
+		{
+		      "input": "Hyderabad",
+			  "outputs": [{
+				  "contains": "Location entered is &quot;Hyderabad, Telangana, India&quot;\n"
+				  },
+					{
+					"contains": "Provide your color\n"
+					}]
+		  },
+          {
+		      "input": "Black",
+			  "outputs": [{
+				  "contains": " Color entered is &quot;Black&quot;\n"
+				    },
+					{
+					"contains": "Success\n"
+					}]
+		      }]
+		}, 
+		{
+		    "discardBefore":true,
+			"name": "TestCase7 - Auto transition at Service node based on else if condition ",
+			"messages": [{
+				"input": "service transition",
+				"outputs": [
+				  "Enter the location\n"
+			         ]
+			},
+		{
+		      "input": "Pune",
+			  "outputs": [{
+				  "contains": "Location entered is &quot;Pune, Maharashtra, India&quot;\n"
+				  },
+					{
+					"contains": "Please select a value: <br/>a)AL-4872<br/>b)AL-4871<br/>c)AL-4870<br/>d)AL-4869<br/>e)AL-4852<br/>f)AL-4847<br/>g)AL-4846<br/>h)AL-4831<br/>i)AL-4830<br/>j)AL-4829<br/>k)AL-4828<br/>l)AL-4827<br/>m)AL-4826<br/>n)AL-4825<br/>o)AL-4806<br/>p)AL-4805<br/>q)AL-4804<br/>r)AL-4788<br/>s)AL-4787<br/>t)AL-4786<br/>u)AL-4785<br/>v)AL-4784<br/>w)AL-4783<br/>x)AL-4782<br/>y)AL-4781<br/>z)AL-4780<br/>aa)AL-4779<br/>ab)AL-4665<br/>ac)AL-4762<br/>ad)AL-4761<br/>ae)AL-4760<br/>af)AL-4759<br/>ag)AL-4758<br/>ah)AL-4757<br/>ai)AL-4756<br/>aj)AL-4747<br/>ak)AL-4746<br/>al)AL-4745<br/>am)AL-4744<br/>an)AL-4743<br/>ao)AL-4740<br/>ap)AL-4739<br/>aq)AL-4737<br/>ar)AL-4736<br/>as)AL-4735<br/>at)AL-4734<br/>au)AL-4733<br/>av)AL-4731<br/>aw)AL-4720<br/>ax)AL-4719<br/>\n"
+					}]
+		  },
+          {
+		      "input": "AL-4719",
+			  "outputs": [{
+				  "contains": "83380\n"
+				    }]
+		      }]
+		  },
+          {
+		    "discardBefore":true,
+			"name": "TestCase8 - Auto transition at Service node  based on if condition",
+			"messages": [{
+				"input": "service transition",
+				"outputs": [
+				  "Enter the location\n"
+			         ]
+			},
+		  {
+		      "input": "Hyderabad",
+			  "outputs": [{
+				  "contains": "Location entered is &quot;Hyderabad, Telangana, India&quot;\n"
+				  },
+				  {
+					"contains": "Provide your color\n"
+					}]
+		  }]
+		  }, 
+		  {
+	        "discardBefore":true,
+			"name": "On intent transition at Message node based on if condition. TestCase9",
+			"messages": [{
+				"input": "Dialog transition",
+				"outputs": [
+				  "Enter number\n"
+			         ]
+			},
+		{
+		      "input": "1235778",
+			  "outputs": [{
+				  "contains": "{&quot;Number&quot;:1235778}\n"
+				  }]
+		  },
+          {
+				"input": "Testcity",
+				"outputs": [
+				  "Enter the city\n"
+			         ]
+		},
+		{
+				"input": "Bangalore",
+				"outputs": [{
+				  "contains": "City entered is Bengaluru\n"
+			         },
+					 {
+					"contains": "Enter color\n"
+					 }]
+		},
+		{
+		      "input": "Red",
+			  "outputs": [{
+				  "contains": " Color entered is &quot;Red&quot;\n"
+				    },
+					{
+					"contains": "Pink\n"
+					}]
+		  }]
+		},
+{
+		"discardBefore":true,
+			"name": "TestCase10 - Transition at Message node based on else  condition.",
+			"messages": [{
+				"input": "Dialog transition",
+				"outputs": [
+				  "Enter number\n"
+			         ]
+			},
+		{
+		      "input": "2831237",
+			  "outputs": [{
+				  "contains": "{&quot;Number&quot;:2831237}\n"
+				  }]
+		  },
+		  {
+		      "input": "No city",
+			  "outputs": [{
+				  "contains": "Success\n"
+				  }]
+		  }]
+		  },
+		
+		  {
+		"discardBefore":true,
+			"name": "TestCase11 - Checking Transition  when user selects mapped intent when displayed as linked intents",
+			"messages": [{
+				"input": "Mappedintent",
+				"outputs": [
+				  "plz input value\n"
+			         ]
+			},
+		{
+                    "input" :"Test 123",
+                      "outputs":[{
+                    "contains": {
+                        "oneOf": [
+                             "Below task can be performed",
+                              "Mapped_test",
+							  "Subintent",
+							  "See all"
+                                ]}
+		               }]
+				},
+		  {
+		      "input": "Mapped_test",
+			  "outputs": [{
+				  "contains": "Enter Number\n"
+				  }]
+		  },
+		  {
+		      "input": "123",
+			  "outputs": [{
+				  "contains": "{&quot;Number2&quot;:&quot;123&quot;}\n"
+				  }]
+		  }]
+		  },
+		  {
+		"discardBefore":true,
+			"name": "TestCase12 - Checking Transition  when user selects subintent when displayed as linked intents",
+			"messages": [{
+				"input": "Mappedintent",
+				"outputs": [
+				  "plz input value\n"
+			         ]
+			},
+		{
+                    "input" :"Test 123",
+                      "outputs":[{
+                    "contains": {
+                        "oneOf": [
+                             "Below task can be performed",
+                              "Mapped_test",
+							  "Subintent",
+							  "See all"
+                                ]}
+		               }]
+				},
+		  {
+		      "input": "Subintent",
+			  "outputs": [{
+				  "contains": "Testing doneee\n"
+				  }]
+		  }]
+		  },
+		  {
+		"discardBefore":true,
+			"name": "TestCase13 - Checking Auto transition at message node based on if condition with entity value.",
+			"messages": [{
+				"input": "Mappedintent entity",
+				"outputs": [
+				  "plz input value\n"
+			         ]
+			},
+		{
+		      "input": "Shabna",
+			  "outputs": [{
+				  "contains": "Shabna\n"
+				    },
+					{
+					"contains": "Enter Number\n"
+					}]
+		  }, 
+		  {
+		      "input": "123",
+			  "outputs": [{
+				  "contains": "{&quot;Number2&quot;:&quot;123&quot;}\n"
+				  }]
+		  }]
+		  },
+          {
+		"discardBefore":true,
+			"name": "TestCase14 - Checking Auto transition at message node based on else condition.",
+			"messages": [{
+				"input": "Mappedintent entity",
+				"outputs": [
+				  "plz input value\n"
+			         ]
+			},
+		{
+		      "input": "No worries",
+			  "outputs": [{
+				  "contains": "No worries\n"
+				    },
+					{
+				  "contains": "Testing doneee\n"
+			}
+		]
+		}
+	]
+  },
+  {
+		"discardBefore":true,
+			"name": "TestCase15 -  Checking Auto transition at message node based on if condition with context value.",
+			"messages": [{
+				"input": "Mappedcontext entity",
+				"outputs": [
+				  "plz input value\n"
+			         ]
+			},
+		{
+		      "input": "Shabna",
+			  "outputs": [{
+				  "contains": "Shabna\n"
+				    },
+					{
+					"contains": "Enter Number\n"
+					}]
+		  }, 
+		  {
+		      "input": "123",
+			  "outputs": [{
+				  "contains": "{&quot;Number2&quot;:&quot;123&quot;}\n"
+				  }]
+		  }]
+		  },
+ {
+		"discardBefore":true,
+			"name": "TestCase16 - Checking List of values(Enumerated) with exact match",
+			"messages": [{
+				"input": "Static list of values",
+				"outputs": [
+				  "Please select one of the values.\n\na) Mango Fruit\nb) Apple Fruit\nc) Test Grapes fruit\nd) Custom Packs\ne) 1 GB 2G For 28 Days 147 Rs\nf) 1 GB 3G For 28 Days 147 Rs\ng) 1 GB 3G For 28 Days @ 155 Rs.\nh) VSS\ni) Password\nj) Create An Incident\nk) Orange Fruit\nl) New Data Offers\n"
+			         ]
+			},
+		{
+		      "input": "Create an Incident",
+			  "outputs": [{
+				  "contains": "{&quot;LOV&quot;:&quot;Create An Incident&quot;}\n"
+				    }
+		]
+		}
+	]
+},
+ {
+		"discardBefore":true,
+			"name": "TestCase17 - Checking list of value(Enumerated) with ambiguity",
+			"messages": [{
+				"input": "Static list of values",
+				"outputs": [
+				  "Please select one of the values.\n\na) Mango Fruit\nb) Apple Fruit\nc) Test Grapes fruit\nd) Custom Packs\ne) 1 GB 2G For 28 Days 147 Rs\nf) 1 GB 3G For 28 Days 147 Rs\ng) 1 GB 3G For 28 Days @ 155 Rs.\nh) VSS\ni) Password\nj) Create An Incident\nk) Orange Fruit\nl) New Data Offers\n"
+			         ]
+			},
+		{
+		      "input": "Fruit",
+			  "outputs": [{
+				  "contains": "The value you entered seems to be ambiguous. Tell me the option you would like to choose. Mango Fruit Apple Fruit Test Grapes fruit Orange Fruit"
+				    }
+		]
+		},
+		{
+		      "input": "Orange Fruit",
+			  "outputs": [{
+				  "contains": "{&quot;LOV&quot;:&quot;Orange Fruit&quot;}\n"
+				    }
+		]
+		}
+		
+	]
+},
+ {
+		"discardBefore":true,
+			"name": "TestCase18 - Checking list of values at entity node when list of values fetched from service node",
+			"messages": [{
+				"input": "Dynamic list of values",
+				"outputs": [
+				  "Please select a value: <br />a)AL-4872<br />b)AL-4871<br />c)AL-4870<br />d)AL-4869<br />e)AL-4852<br />f)AL-4847<br />g)AL-4846<br />h)AL-4831<br />i)AL-4830<br />j)AL-4829<br />k)AL-4828<br />l)AL-4827<br />m)AL-4826<br />n)AL-4825<br />o)AL-4806<br />p)AL-4805<br />q)AL-4804<br />r)AL-4788<br />s)AL-4787<br />t)AL-4786<br />u)AL-4785<br />v)AL-4784<br />w)AL-4783<br />x)AL-4782<br />y)AL-4781<br />z)AL-4780<br />aa)AL-4779<br />ab)AL-4665<br />ac)AL-4762<br />ad)AL-4761<br />ae)AL-4760<br />af)AL-4759<br />ag)AL-4758<br />ah)AL-4757<br />ai)AL-4756<br />aj)AL-4747<br />ak)AL-4746<br />al)AL-4745<br />am)AL-4744<br />an)AL-4743<br />ao)AL-4740<br />ap)AL-4739<br />aq)AL-4737<br />ar)AL-4736<br />as)AL-4735<br />at)AL-4734<br />au)AL-4733<br />av)AL-4731<br />aw)AL-4720<br />ax)AL-4719<br />\n"
+			         ]
+			},
+		{
+		      "input": "AL-4871",
+			  "outputs": [{
+				  "contains": "{&quot;Dynamic_LOV&quot;:&quot;89823&quot;}\n"
+				    }
+		]}
+	   ]
+   },
+ {
+		"discardBefore":true,
+			"name": "TestCase19 - Checking list of values(Lookup) with Exact match ",
+			"messages": [{
+				"input": "Test Lookup",
+				"outputs": [
+				  "Enter an item\n"
+			         ]
+			},
+		{
+		      "input": "Debit Card",
+			  "outputs": [{
+					"contains": {
+                          "oneOf": [
+                          " Value entered is &quot;Debit Card&quot;\n",
+                          " Value entered is [{&quot;title&quot;:&quot;Debit Card&quot;,&quot;value&quot;:&quot;Debit"
+                                ]}
+		        }]
+		}
+	]
+},
+ {
+		"discardBefore":true,
+			"name": "TestCase20- At confirmation node , checking Transitions based on Yes condition.",
+			"messages": [{
+				"input": "TestConfirmation",
+				"outputs": [
+				  "Enter the Name\n"
+			         ]
+			},
+		{
+		      "input": "Shabna",
+			  "outputs": [{
+				  "contains": "Confirm here\n"
+				    }]
+		},
+		{
+		      "input": "Yes",
+			  "outputs": [{
+				  "contains": "Yes flow\n"
+				    }]
+		}]
+		},
+		 {
+		"discardBefore":true,
+			"name": "TestCase21 - At Confirmation node, checking transition based on No condition",
+			"messages": [{
+				"input": "TestConfirmation",
+				"outputs": [
+				  "Enter the Name\n"
+			         ]
+			},
+		{
+		      "input": "Shabna",
+			  "outputs": [{
+				  "contains": "Confirm here\n"
+				    }]
+		},
+		{
+		      "input": "No",
+			  "outputs": [{
+				  "contains": "No flow\n"
+				    }]
+		     }]
+		},
+		{
+		"discardBefore":true,
+			"name": "TestCase22 - At confirmation node, transition based on else condition",
+			"messages": [{
+				"input": "TestConfirmation",
+				"outputs": [
+				  "Enter the Name\n"
+			         ]
+			},
+		{
+		      "input": "Shabna",
+			  "outputs": [{
+				  "contains": "Confirm here\n"
+				    }]
+		},
+		{
+		      "input": "123asd",
+			  "outputs": [{
+				  "contains": "Sorry no intent was found for your utterance. Can you please try something else\n"
+				    }]
+		}]
+		},
+		{
+	        "discardBefore":true,
+			"name": "Dialog RegressionSuit TestCase23 - Intent pattern(Planning journey) and entity Pattern(return on *)",
+			"messages": [{
+				"input": "Planning Journey to return on Monday",
+				"outputs": [
+				  "Enter value 1\n"
+			         ]
+			},
+		   {
+		      "input": "Friday",
+			  "outputs": [{
+				  "contains": "{&quot;L1&quot;:&quot;Friday&quot;,&quot;L2&quot;:&quot;Monday&quot;}\n"
+				  }
+				  ]
+		   }
+		 ] 	
+		},
+		{
+	        "discardBefore":true,
+			"name": "Dialog RegressionSuit TestCase24 - MultiItem for City",
+			"messages": [{
+				"input": "MultiItemForCity",
+				"outputs": [
+				  "Enter City\n"
+			         ]
+			},
+		   {
+		      "input": "Mumbai,Delhi,Kolkata",
+			  "outputs": [{
+				  "contains": "city entered is Mumbai,Delhi,Kolkata\n"
+				  }
+				  ]
+		   }
+		 ]	
+		},
+		{
+            "discardBefore":true,
+            "name": "Multiitem TestCase26 - MultiItem for Quantity",
+            "messages":[
+                {
+                    "input": "Quantity",
+                    "outputs": [
+                        "Please mention valid qty\n"
+                    ]
+                    },
+				{
+                    "input": "5 grams, 5 kg, 1 ton",
+                    "outputs": [
+                        "[{&quot;unit&quot;:&quot;gram&quot;,&quot;amount&quot;:5,&quot;type&quot;:&quot;weight&quot;,&quot;source&quot;:&quot;5 grams&quot;},{&quot;unit&quot;:&quot;gram&quot;,&quot;amount&quot;:5000,&quot;type&quot;:&quot;weight&quot;,&quot;source&quot;:&quot;5 kg&quot;},{&quot;unit&quot;:&quot;gram&quot;,&quot;amount&quot;:1000000,&quot;type&quot;:&quot;weight&quot;,&quot;source&quot;:&quot;1 ton&quot;}]\n"
+                    ]
+                
+                }
+            ]
+        },
+		 {
+            "discardBefore":true,
+            "name": "Multiitem TestCase27 - MultiItem for List of Values- Lookup",
+            "messages":[
+                {
+                    "input": "CheckLookupMultiItem",
+                    "outputs": [
+                        "Select Value\n"
+                    ]
+                    },
+				{
+                    "input": "Monday,Tuesday,wednesday ",
+                    "outputs": [
+                            "{&quot;MultiLookup&quot;:[&quot;Monday&quot;,&quot;Tuesday&quot;,&quot;Wednesday&quot;]}\n"
+                    ]
+                
+                }
+            ]
+        },
+        {
+            "discardBefore":true,
+            "name": "Multiitem TestCase28 - MultiItem for List of values-enumerated",
+            "messages":[
+                {
+                    "input": "Enumerated check",
+                    "outputs": [
+                        "Please provide ur list of values\n"
+                    ]
+                    },
+				{
+                    "input": "Sour Taste,Big Fruit,Sweet Taste ",
+                    "outputs": [
+                        "{&quot;EC&quot;:[&quot;GRAPES&quot;,&quot;Water Melon&quot;,&quot;Pomegranate&quot;]}\n"
+                    ]
+                
+                }
+            ]
+        },
+		{
+	        "discardBefore":true,
+			"name": "Dialog RegressionSuit TestCase29 - NER Check for swapped entities",
+			"messages": [{
+				"input": "Convert Currency 100 USD to 100 INR",
+				"outputs": [
+				  " Code of Currency1 is INR\nAmount of Currency 1 is 100\nCode of Currency2 is USD\nAmount of Currency2 is 100\n"
+			         ]
+			}
+		  ] 	  	
+		},
+		{
+		
+	        "discardBefore":true,
+			"name": "Dialog RegressionSuit TestCase30 - Checking response for help",
+			"messages": [{
+				"input": "Help",
+				"outputs": [
+					"Here are the actions I can perform for you. \n a) Apply Leave \n b) CheckConfirmation \n c) CheckEntity \n d) CheckHidden \n e) CheckLookupMultiItem \n f) CheckOptional \n g) CheckPublish \n h) Comp Trans at Mess Node \n i) Composite Location Date \n j) Composite Mandatory Script \n k) Composite Opn Script \n l) Composite Trans to Dialog \n m) Default Fallback Intent \n n) Dialog transition \n o) Dynamic list of values \n p) Dynamiccheck \n q) Entity Hidden \n r) Enumerated check \n s) Lookup \n t) LoopTest \n u) Mand with Script \n v) Mapped test \n w) Mappedcontext entity \n x) Mappedintent \n y) Mappedintent entity \n z) MultiitemForCity \n aa) NER \n ab) NewTask \n ac) Opti with Script \n ad) Person Name \n ae) Quantity \n af) Script transition \n ag) Service transition \n ah) Static list of values \n ai) TaskForMultiitem \n aj) Test Transfer \n ak) Test Transition \n al) Test lookup \n am) TestAge \n an) TestAirport \n ao) TestConfirmation \n ap) TestDatePeriod \n aq) TestLocation \n ar) TestRec \n as) TestTime \n at) Testcity \n au) Testcolor \n av) Teststring \n aw) Transfer Funds \n ax) Validate Location \n ay) get transaction \n \nI can help answer your questions on DialogRegSuite.\n"
+			         ]
+			}
+		 ] 	  	
+		},
+		{
+		
+	        "discardBefore":true,
+			"name": "Dialog RegressionSuit TestCase31- Checking acknowledgement word Thanks response",
+			"messages": [{
+				"input": "Thanks",
+				"outputs": [
+				  "You're welcome."
+			         ]
+			}
+		 ]  	  	
+		},
+		{
+		
+	        "discardBefore":true,
+			"name": "Dialog RegressionSuit TestCase32 - Default Dialog Response validation and also checking response for two sentences",
+			"messages": [{
+				"input": "There are lot of tasks to do. Can you please help me in organizing them.",
+				"outputs": [
+				  "Sorry no intent was found for your utterance. Can you please try something else\n"
+			         ]
+			}
+		  ] 	  	
+		},
+		{
+		
+	        "discardBefore":true,
+			"name": "Dialog RegressionSuit TestCase33 - Checking  Standed response for Who are you ",
+			"messages": [{
+				"input": "who are you",
+				"outputs": [
+				  "I'm DialogRegSuite."
+			         ]
+			}
+		  ]	  	
+		},
+		{
+		
+	        "discardBefore":true,
+			"name": "Dialog RegressionSuit TestCase34 - Checking synonyms for Intent",
+			"messages": [{
+				"input": "send money",
+				"outputs": [
+				  "Enter Currency\n"
+			         ]
+			}
+		   ]	  	
+		},
+		{
+	        "discardBefore":true,
+			"name": "Dialog RegressionSuit TestCase35 - Checking response when user mentions thanks after list of tasks are displayed",
+			"messages": [{
+				"input": "help",
+				"outputs": [
+					"Here are the actions I can perform for you. \n a) Apply Leave \n b) CheckConfirmation \n c) CheckEntity \n d) CheckHidden \n e) CheckLookupMultiItem \n f) CheckOptional \n g) CheckPublish \n h) Comp Trans at Mess Node \n i) Composite Location Date \n j) Composite Mandatory Script \n k) Composite Opn Script \n l) Composite Trans to Dialog \n m) Default Fallback Intent \n n) Dialog transition \n o) Dynamic list of values \n p) Dynamiccheck \n q) Entity Hidden \n r) Enumerated check \n s) Lookup \n t) LoopTest \n u) Mand with Script \n v) Mapped test \n w) Mappedcontext entity \n x) Mappedintent \n y) Mappedintent entity \n z) MultiitemForCity \n aa) NER \n ab) NewTask \n ac) Opti with Script \n ad) Person Name \n ae) Quantity \n af) Script transition \n ag) Service transition \n ah) Static list of values \n ai) TaskForMultiitem \n aj) Test Transfer \n ak) Test Transition \n al) Test lookup \n am) TestAge \n an) TestAirport \n ao) TestConfirmation \n ap) TestDatePeriod \n aq) TestLocation \n ar) TestRec \n as) TestTime \n at) Testcity \n au) Testcolor \n av) Teststring \n aw) Transfer Funds \n ax) Validate Location \n ay) get transaction \n \nI can help answer your questions on DialogRegSuite.\n"
+			         ]
+			},
+		   {
+		      "input": "thanks",
+			  "outputs": [
+				  "You're welcome."
+				  ]
+		   }
+		  ]	
+		},
+		{
+	        "discardBefore":true,
+			"name": "Dialog RegressionSuit TestCase36 - Checking error prompt for an entity",
+			"messages": [{
+				"input": "Lookup",
+				"outputs": [
+				  "Enter value 1\n"
+			         ]
+			},
+		   {
+		      "input": "sjadhgwqd",
+			  "outputs": [{
+				  "contains": "That is not a valid option. Let us try again.\n"
+				  }
+				  ]
+		   }
+		  ]	
+		},
+		{
+	        "discardBefore":true,
+			"name": "Dialog RegressionSuit TestCase37 - Checking if task is being identified when user selects alphabet of the option",
+			"messages": [{
+				"input": "help",
+				"outputs": [
+					"Here are the actions I can perform for you. \n a) Apply Leave \n b) CheckConfirmation \n c) CheckEntity \n d) CheckHidden \n e) CheckLookupMultiItem \n f) CheckOptional \n g) CheckPublish \n h) Comp Trans at Mess Node \n i) Composite Location Date \n j) Composite Mandatory Script \n k) Composite Opn Script \n l) Composite Trans to Dialog \n m) Default Fallback Intent \n n) Dialog transition \n o) Dynamic list of values \n p) Dynamiccheck \n q) Entity Hidden \n r) Enumerated check \n s) Lookup \n t) LoopTest \n u) Mand with Script \n v) Mapped test \n w) Mappedcontext entity \n x) Mappedintent \n y) Mappedintent entity \n z) MultiitemForCity \n aa) NER \n ab) NewTask \n ac) Opti with Script \n ad) Person Name \n ae) Quantity \n af) Script transition \n ag) Service transition \n ah) Static list of values \n ai) TaskForMultiitem \n aj) Test Transfer \n ak) Test Transition \n al) Test lookup \n am) TestAge \n an) TestAirport \n ao) TestConfirmation \n ap) TestDatePeriod \n aq) TestLocation \n ar) TestRec \n as) TestTime \n at) Testcity \n au) Testcolor \n av) Teststring \n aw) Transfer Funds \n ax) Validate Location \n ay) get transaction \n \nI can help answer your questions on DialogRegSuite.\n"
+			         ]
+			},
+		   {
+		      "input": "i",
+			  "outputs": [{
+				  "contains": "Enter Location and Date or Location/Date\n"
+				  }
+				  ]
+		   }
+		  ]	
+		},
+		{
+	        "discardBefore":true,
+			"name": "Dialog RegressionSuit TestCase38 - Checking if task is being identified when mentions the task name from the list of tasks displayed",
+			"messages": [{
+				"input": "help",
+				"outputs": [
+					"Here are the actions I can perform for you. \n a) Apply Leave \n b) CheckConfirmation \n c) CheckEntity \n d) CheckHidden \n e) CheckLookupMultiItem \n f) CheckOptional \n g) CheckPublish \n h) Comp Trans at Mess Node \n i) Composite Location Date \n j) Composite Mandatory Script \n k) Composite Opn Script \n l) Composite Trans to Dialog \n m) Default Fallback Intent \n n) Dialog transition \n o) Dynamic list of values \n p) Dynamiccheck \n q) Entity Hidden \n r) Enumerated check \n s) Lookup \n t) LoopTest \n u) Mand with Script \n v) Mapped test \n w) Mappedcontext entity \n x) Mappedintent \n y) Mappedintent entity \n z) MultiitemForCity \n aa) NER \n ab) NewTask \n ac) Opti with Script \n ad) Person Name \n ae) Quantity \n af) Script transition \n ag) Service transition \n ah) Static list of values \n ai) TaskForMultiitem \n aj) Test Transfer \n ak) Test Transition \n al) Test lookup \n am) TestAge \n an) TestAirport \n ao) TestConfirmation \n ap) TestDatePeriod \n aq) TestLocation \n ar) TestRec \n as) TestTime \n at) Testcity \n au) Testcolor \n av) Teststring \n aw) Transfer Funds \n ax) Validate Location \n ay) get transaction \n \nI can help answer your questions on DialogRegSuite.\n"
+			         ]
+			},
+		   {
+		      "input": "NER",
+			  "outputs": [{
+				  "contains": "Enter Currency1\n"
+				  }
+				  ]
+		   }
+		  	]
+		},
+		{
+		
+	        "discardBefore":true,
+			"name": "Dialog RegressionSuit TestCase39 - Checking response for exact FAQ which has got 100% score",
+			"messages": [{
+				"input": "can i get offer on existing personal loan?",
+				"outputs": [
+				  "We offer Top Up facility if you have paid 12 EMI on the existing Personal Loan. You can Place the request for Top up on existing Personal Loan\n"
+			         ]
+			}
+		   	]  	
+		},
+		{
+	        "discardBefore":true,
+			"name": "Dialog RegressionSuit TestCase40 - Checking response when selects one of the FAQ Suggestions",
+			"messages": [{
+		      "input": "do i need a guarantor for loan?",
+			  "outputs": [
+				  {
+				  "contains": {
+                          "allOf": [
+                          "Did you mean? ",
+                          "Do I need a guarantor for New Car Loans?",
+                          "Do I need a guarantor for Pre-owned Car Loans?"
+						
+                                ]}
+				  }]
+		   },
+		   {
+		   
+				"input": "Do I need a guarantor for New Car Loans?",
+				"outputs": [
+				  "No, but if your income does not meet our credit criteria then you may be required to have a Gurantor/co-applicant. To stand surety for your loan.\r\n\r\n\n"
+			         ]
+			}
+		  ]	
+		},
+		{
+	        "discardBefore":true,
+			"name": "Dialog RegressionSuit TestCase41 - Checking CS response when user says Yes for single FAQ suggestion presented in Did you mean <>",
+			"messages": [{
+		      "input": "how will bank decide about my house loan qualification?",
+			  "outputs": [
+				  {
+				  "contains": {
+                          "allOf": [
+                          "Did you mean? ",
+                          "How will  Bank decide my home loan eligibility?"
+						
+                                ]}
+				  }]
+		   },
+		   {
+		   
+				"input": "yes",
+				"outputs": [
+				  "Bank assess the customer's repayment capacity based on income, age, qualifications, number of dependants, spouse's income, assets, liabilities, stability and continuity of occupation, and savings history.\r\n\n"
+			       ]
+			}
+		  	]
+		},
+		{
+	        "discardBefore":true,
+			"name": "Dialog RegressionSuit TestCase42 -  Checking CS response when user says No for single FAQ suggestion  presented in Did you mean <>",
+			"messages": [{
+		      "input": "how will bank decide about my house loan qualification?",
+			  "outputs": [
+				  {
+				  "contains": {
+                          "allOf": [
+                          "Did you mean? ",
+                          "How will  Bank decide my home loan eligibility?"
+						
+                                ]}
+				  }]
+		   },
+		   {
+		   
+				"input": "no",
+				"outputs": [
+					"Here are the actions I can perform for you. \n a) Apply Leave \n b) CheckConfirmation \n c) CheckEntity \n d) CheckHidden \n e) CheckLookupMultiItem \n f) CheckOptional \n g) CheckPublish \n h) Comp Trans at Mess Node \n i) Composite Location Date \n j) Composite Mandatory Script \n k) Composite Opn Script \n l) Composite Trans to Dialog \n m) Default Fallback Intent \n n) Dialog transition \n o) Dynamic list of values \n p) Dynamiccheck \n q) Entity Hidden \n r) Enumerated check \n s) Lookup \n t) LoopTest \n u) Mand with Script \n v) Mapped test \n w) Mappedcontext entity \n x) Mappedintent \n y) Mappedintent entity \n z) MultiitemForCity \n aa) NER \n ab) NewTask \n ac) Opti with Script \n ad) Person Name \n ae) Quantity \n af) Script transition \n ag) Service transition \n ah) Static list of values \n ai) TaskForMultiitem \n aj) Test Transfer \n ak) Test Transition \n al) Test lookup \n am) TestAge \n an) TestAirport \n ao) TestConfirmation \n ap) TestDatePeriod \n aq) TestLocation \n ar) TestRec \n as) TestTime \n at) Testcity \n au) Testcolor \n av) Teststring \n aw) Transfer Funds \n ax) Validate Location \n ay) get transaction \n \nI can help answer your questions on DialogRegSuite.\n"
+			      				   ]
+			}
+		  	]
+		},
+		{
+		
+	        "discardBefore":true,
+			"name": "Dialog RegressionSuit TestCase43 - Checking CS response when an FAQ gets score above maximum threshold (80%)",
+			"messages": [{
+				"input": "what are the benefits of having saving Account for Business loan?",
+				"outputs": [
+				  "You get preferred Processing Fee, priority processing and simpler documentation if you have a Current/Saving Account with HDFC Bank. This is taken into account at the time of disbursal of the loan. You can pay through Standing Instructions to debit your Bank Account with the EMI amount.\n"
+			         ]
+			}
+		   	 ] 	
+		},
+		
+		{
+	        "discardBefore":true,
+			"name": "Dialog RegressionSuit TestCase44 - Checking CS response when entity error count has exceeded 5 times",
+			"messages": [{
+				"input": "Lookup",
+				"outputs": [
+				  "Enter value 1\n"
+			         ]
+			},
+		   {
+		      "input": "12",
+			  "outputs": [{
+				  "contains": "That is not a valid option. Let us try again.\n"
+				  }
+				  ]
+		   },
+		   {
+		      "input": "12",
+			  "outputs": [{
+				  "contains": "That is not a valid option. Let us try again.\n"
+				  }
+				  ]
+		   },
+		   {
+		      "input": "12",
+			  "outputs": [{
+				  "contains": "That is not a valid option. Let us try again.\n"
+				  }
+				  ]
+		   },
+		   {
+		      "input": "12",
+			  "outputs": [{
+				  "contains": "That is not a valid option. Let us try again.\n"
+				  }
+				  ]
+		   },
+		   {
+		      "input": "124",
+			  "outputs": [{
+				  "contains": "You have exceeded the number of allowed attempts. Ok, I am discarding the task for now. We can start over whenever you are ready. Is there anything else I can help you with?\n"
+				  }
+				  ]
+		   }
+		  	]
+		},
+		{
+            "discardBefore":true,
+                 "name": "CompositeEntityTransition TestCase45 -  Checking Transition to Dialog at composite entity",
+                 "messages": [{
+                       "input": "composite trans to dialog",
+                       "outputs": [{
+                   "contains": "Enter value\r\n"
+                       }]
+           },
+           {
+            "input": "india is  11-11-2011 10 pm,composite location date",
+            "outputs": [{
+            "contains": "Enter Location and Date or Location/Date\n"
+           }]
+		   }	    
+        ]
+		},
+		{
+            "discardBefore":true,
+                 "name": "CompositeEntityTransition TestCase46 - Checking subintent  ml utterance at composite entity",
+                 "messages": [{
+                       "input": "Composite Trans to dialog",
+                       "outputs": [{
+                   "contains": "Enter value\r\n"
+                       }]
+           },
+           {
+            "input": "India is 11-11-2011 10 pm,pogo is my favorite channel",
+            "outputs": [{
+            "contains": "Subintent10 message\n"
+           }]
+		   }	    
+        ]
+		},
+		{
+            "discardBefore":true,
+                 "name": "CompositeEntityTransition TestCase47 - Checking Transition to SubIntent at composite entity",
+                 "messages": [{
+                       "input": "Composite Trans to dialog",
+                       "outputs": [{
+                   "contains": "Enter value\r\n"
+                       }]
+           },
+           {
+            "input": "India",
+            "outputs": [{
+            "contains": "Subintent10 message\n"
+           }]
+		   } 
+        ]
+		},
+		{
+            "discardBefore":true,
+                 "name": "CompositeEntityTransition TestCase48 - Entity value identification along with pattern for string entity",
+                 "messages": [{
+                       "input": "Send Money 7 EUR to sbi5678",
+                       "outputs": [{
+                   "contains": "The code entered is EUR and amount is 7The account number entered is sbi5678\n"
+                       },
+					   {
+                   "contains": "Enter Time\n"
+                       }
+					   ]
+           }		   
+        ]
+		},
+		{
+            "discardBefore":true,
+                 "name": "CRE TestCase49-Checking reuse fucntionality",
+                 "messages": [{
+                       "input": "Apply leave for 5 days",
+                       "outputs": [{
+                   "contains": "The first number entered is 5The Leave Type entered is Leave The Second number  entered is 5\n"
+                       }]
+           }		   
+        ]
+        },
+		{
+            "discardBefore":true,
+                 "name": "Checking Optional  Test case 50-Checking composite entity  with combination of sub entities i.e number and ListOfValues [ Lookup ]",
+                 "messages": [{
+                       "input": "Add to Cart 6 Bags",
+                       "outputs": [{
+                   "contains": "The  number entered is 6\nThe look up entered is Bags\r\n"
+                       }]
+           }		   
+        ]
+        },
+		{
+            "discardBefore":true,
+                 "name": "Check optional TestCase 51-Checking functionality of optional entity by mentioning an invalid value for the optional Entity",
+                 "messages": [{
+                       "input": "Add to Cart",
+                       "outputs": [{
+                   "contains": "Enter Number\r\n"
+                       }]
+           },
+           {
+		      "input": "Test",
+			  "outputs": [{
+				  "contains": "Enter lookup\n"
+				  }
+				  ]
+		   },
+		   {
+		      "input": "Bags",
+			  "outputs": [{
+				  "contains": "\nThe look up entered is Bags\n"
+				  }
+				  ]
+		   }
+		   
+        ]
+		},
+		{
+            "discardBefore":true,
+                 "name": "Check Optional test case52-Checking composite entity by giving the entity value along with the intent pattern",
+                 "messages": [{
+                       "input": "Add to Cart Bags",
+                       "outputs": [{
+                   "contains": "Enter Number\r\n"
+                       }]
+           },
+           {
+		      "input": "Time",
+			  "outputs": [{
+				  "contains": "\n The look up entered is Bags\n"
+				  }
+				  ]
+		   }
+		   
+        ]
+		},
+		{
+            "discardBefore":true,
+                 "name": "Check Hidden test case53-Validating hidden entity",
+                 "messages": [{
+                       "input": "Remove from Cart",
+                       "outputs": [{
+                   "contains": "Enter lookup1\r\n"
+                       }]
+           },
+           {
+		      "input": "Apple",
+			  "outputs": [{
+				  "contains": "The look up entered is Apple\n"
+				  }
+				  ]
+		   }
+		   
+        ]
+		},
+		{
+            "discardBefore":true,
+                 "name": "Checking Hidden Test case54-Checking hidden entity by giving hidden entity value along with intent pattern in user utterance.",
+                 "messages": [{
+                       "input": "Remove from Cart Yellow Banana",
+                       "outputs": [{
+                   "contains": "The color entered is Yellow\nThe look up entered is banana\n"
+                       }]
+           }		   
+        ]
+		},
+		{
+            "discardBefore":true,
+                 "name": "Composite Entity mand TestCase 55- Next intent transition at Entity node based on else if condition where Entity type is mandatory",
+                 "messages": [{
+                       "input": "Mand with Script",
+                       "outputs": [{
+                   "contains": "Select the Item\n"
+                       }]
+           },
+           {
+            "input": "Savings account, TestTime 10 pm",
+            "outputs": [{
+                        "contains": "Enter the Time T22:00:00+05:30\n"
+                     },
+					   {
+                   "contains": "Select the Item\n"
+                       }]
+           }]
+		   },
+		   {
+            "discardBefore":true,
+                 "name": "Composite Entity mand TestCase 56- Next intent transition at entity node based on if condition where Entity type is  mandatory",
+                 "messages": [{
+                       "input": "Mand with Script",
+                       "outputs": [{
+                   "contains": "Select the Item\n"
+                       }]
+           },
+           {
+            "input": "Savings account, Ask for service plans",
+            "outputs": [{
+                        "contains": "Service plan message\n"
+                     },
+					   {
+                   "contains": "Select the Item\n"
+                       }]
+           }]
+		   },
+		   {
+            "discardBefore":true,
+                 "name": "Composite Entity mand TestCase 57 - Next intent transition at Entity node based on if condition where Entity type is Optional",
+                 "messages": [{
+                       "input": "Opti with Script",
+                       "outputs": [{
+                   "contains": "Select one\n"
+                       }]
+           },
+           {
+            "input": "Banana, What are the service plans available",
+            "outputs": [{
+                        "contains": "Service Plan Message\n"
+                     },
+					   {
+                   "contains": "Select one\n"
+                       }]
+           }]
+		   },
+{
+            "discardBefore":true,
+                 "name": "Composite Entity mand TestCase 58 -Next intent transition at Entity node based on else if condition where Entity type is optional",
+                 "messages": [{
+                       "input": "Opti with Script",
+                       "outputs": [{
+                   "contains": "Select one\n"
+                       }]
+           },
+           {
+            "input": "Banana,TestTime",
+            "outputs": [{
+                        "contains": "Enter Time\n"
+                     }
+					   ]
+           }]
+		   },
+{
+            "discardBefore":true,
+                 "name": "Composite Entity mand TestCase 59 -Next intent transition at Entity node based on else if condition  along with entity value where Entity type is  optional",
+                 "messages": [{
+                       "input": "Opti with Script",
+                       "outputs": [{
+                   "contains": "Select one\n"
+                       }]
+           },
+           {
+            "input": "Steel Cooker,TestTime 10 Pm",
+            "outputs": [{
+                        "contains": "Enter the Time T22:00:00+05:30\n"
+                     }
+					   ]
+           }]
+		   },
+{
+            "discardBefore":true,
+                 "name": "Composite Entity mand TestCase 60- Next intent transition at composite entity based on if condition where entity type is mandatory",
+                 "messages": [{
+                       "input": "Composite Mandatory Script",
+                       "outputs": [{
+                   "contains": "Enter the Item\n"
+                       }]
+           },
+           {
+            "input": "2 Apple, TestTime",
+            "outputs": [{
+                "contains": "Enter Time\n"
+                    }]
+        },
+		{
+            "input": "10 pm",
+            "outputs": [{
+                "contains": "Enter the Time T22:00:00+05:30\n"
+                    },
+                    {
+                        "contains": "Enter the Item\n"
+                            }]
+        }]
+		},
+		{
+            "discardBefore":true,
+                 "name": "Composite Entity mand TestCase 61- Next intent transition at composite entity based on else condition where entitytype is mandatory",
+                 "messages": [{
+                       "input": "Composite Mandatory Script",
+                       "outputs": [{
+                   "contains": "Enter the Item\n"
+                       }]
+           },
+           {
+            "input": "2 Apple, Ask for Service Plans",
+            "outputs": [{
+                "contains": "Service Plan Message\n"
+                    },
+                    {
+                        "contains": "Enter the Item\n"
+                            }]
+        }]
+		},
+  
+{
+            "discardBefore":true,
+                 "name": "Composite Entity opt TestCase 62- Next intent transition at composite entity  based on if condition where entity type is optional",
+                 "messages": [{
+                       "input": "Composite Opn Script",
+                       "outputs": [{
+                   "contains": "Enter the Item\n"
+                       }]
+           },
+           {
+            "input": "2 Apple, TestTime",
+            "outputs": [{
+                "contains": "Enter Time\n"
+                    }]
+        },
+		{
+            "input": "10 pm",
+            "outputs": [{
+                "contains": "Enter the Time T22:00:00+05:30\n"
+                    },
+                    {
+                        "contains": "Enter the Item\n"
+                            }]
+        }]
+		},
+{
+            "discardBefore":true,
+                 "name": "Composite Entity optional TestCase 63- Next intent transition at composite entity based on else condition where entity type is optional",
+                 "messages": [{
+                       "input": "Composite Opn Script",
+                       "outputs": [{
+                   "contains": "Enter the Item\n"
+                       }]
+           },
+           {
+            "input": "2 Apple, Ask for Service plans",
+            "outputs": [{
+                "contains": "Service Plan Message\n"
+                    },
+                    {
+                        "contains": "Enter the Item\n"
+                            }]
+        }]
+		},
+		{
+            "discardBefore":true,
+                 "name": "Test case64 - Checking the intent recognition with plural form of the words in the task",
+                 "messages": [{
+                       "input": "get transactions",
+                       "outputs": [{
+                   "contains": "Do you want proceed with any transations ?"
+                       }]
+           }		   
+        ]
+		},
+		{
+            "discardBefore":true,
+                 "name": "get transaction Test case65- Checking the intent recognition with one of the words in the intent being mentioned in upper cases",
+                 "messages": [{
+                       "input": "Get transactions",
+                       "outputs": [{
+                   "contains": "Do you want proceed with any transations ?"
+                       }]
+           }		   
+        ]
+		},
+		{
+            "discardBefore":true,
+                 "name": "get transaction Test case66- Checking the intent recognition with two words in the intent being mentioned in upper cases",
+                 "messages": [{
+                       "input": "Get Transactions",
+                       "outputs": [{
+                   "contains": "Do you want proceed with any transations ?"
+                       }]
+           }		   
+        ]
+		},
+		{
+            "discardBefore":true,
+                 "name": "get transaction Test case67 -Checking the intent recognition with one of the words in the intent being mentioned in upper cases",
+                 "messages": [{
+                       "input": "get Transactions",
+                       "outputs": [{
+                   "contains": "Do you want proceed with any transations ?"
+                       }]
+           }		   
+        ]
+		},
+		   {
+            "discardBefore":true,
+                 "name": "Test case 70- Checking Date period entity",
+                 "messages": [{
+                       "input": "TestDatePeriod from 25-12-2018 to 29-12-2018",
+                       "outputs": [{
+                   "contains": "From Date entered is 2018-12-25To Date entered is 2018-12-29\n"
+                       }]
+           }		   
+        ]
+        },
+		{
+            "discardBefore":true,
+                 "name": "TestCase 71-Checking Airport entity",
+                 "messages": [{
+                       "input": "TestAirport",
+                       "outputs": [{
+                   "contains": "Enter Airport\n"
+                       }]
+           },
+           {
+            "input": "PPV",
+            "outputs": [{
+                        "contains": "Airport entered is Port Protection Seaplane Base IATA code entered is PPV\n"
+                        }
+					   ]
+           }]
+		   },
+		   {
+            "discardBefore":true,
+                 "name": "TestCase 72 -Checking Age Entity",
+                 "messages": [{
+                       "input": "TestAge",
+                       "outputs": [{
+                   "contains": "Enter Age\n"
+                       }]
+           },
+           {
+            "input": "3 years",
+            "outputs": [{
+                        "contains": "The type Entered is age\n Unit Entered is month\n Amount Entered is 36\n source Entered is 3 years\n"
+                        }
+					   ]
+           }]
+		   },
+		{
+            "discardBefore":true,
+                 "name": "TestCase 73-Checking loop limit message when the entity type is hidden",
+                 "messages": [{
+                       "input": "Entity Hidden",
+                       "outputs": [{
+                   "contains": "Service Plan message\n"
+                       },
+					   {
+                   "contains": "Service Plan message\n"
+                       },
+					   {
+                   "contains": "Service Plan message\n"
+                       },
+					   {
+                   "contains": "Service Plan message\n"
+                       },
+					   {
+                   "contains": "Service Plan message\n"
+                       },
+					   {
+                   "contains": "Service Plan message\n"
+                       },
+					   {
+                   "contains": "Service Plan message\n"
+                       },
+					   {
+                   "contains": "Service Plan message\n"
+                       },
+					   {
+                   "contains": "Service Plan message\n"
+                       },
+					   {
+                   "contains": "Loop limit reached for node NumX"
+                       }
+					   ]
+           }]
+		   },
+		   {
+            "discardBefore":true,
+                 "name": "TestCase 74- Recursive dialog ",
+                 "messages": [{
+                       "input": "TestRec",
+                       "outputs": [{
+                   "contains": "Enter color"
+                       }]
+           },
+           {
+            "input": "Red",
+            "outputs": [{
+                "contains": "Red"
+                    }
+                    ]
+        },
+		{
+            "input": "Test Transition",
+            "outputs": [{
+                "contains": "Enter number"
+                    }
+                    ]
+        },
+		{
+            "input": "23",
+            "outputs": [{
+                "contains": "23"
+                    },
+					{
+                "contains": "Enter color"
+                    }
+                    ]
+        },
+		{
+            "input": "Blue",
+            "outputs": [{
+                "contains": "Blue"
+                    }
+                    ]
+        }
+		]
+		},
+		{
+            "discardBefore":true,
+                 "name": "TestCase 75- Checking if transition is returning back to parent dialog  after linked dialog has been executed. [ To linked dialog when  entity node is connected ]",
+                 "messages": [{
+                       "input": "Test Transfer",
+                       "outputs": [{
+                   "contains": "Enter currency"
+                       }]
+           },
+           {
+            "input": "12 INR",
+            "outputs": [{
+                "contains": "Enter account number"
+                    }
+                    ]
+        },
+		{
+            "input": "rtgh",
+            "outputs": [{
+                "contains": "Enter Time"
+                    }
+                    ]
+        },
+		{
+            "input": "11 am",
+            "outputs": [{
+                "contains": "Enter the Time T11:00:00+05:30\n"
+                    },
+					{
+                "contains": "Message node for TestTime"
+                    }
+                    ]
+        }
+		]
+		},
+		{
+            "discardBefore":true,
+                 "name": "TestCase 76- Checking if transition is returning back to parent dialog  after linked dialog has been executed. [ To linked dialog when message node is connected ]",
+                 "messages": [{
+                       "input": "Transfer funds",
+                       "outputs": [{
+                   "contains": "Enter currency"
+                       }]
+           },
+           {
+            "input": "11 INR",
+            "outputs": [{
+                "contains": "Enter account number"
+                    }
+                    ]
+        },
+		{
+            "input": "sbi5678",
+            "outputs": [{
+                "contains": "The code entered is INR and amount is 11The account number entered is sbi5678\n"
+                    },
+					{
+                "contains": "Enter \n"
+                    }
+                    ]
+        },
+		{
+            "input": "11 pm",
+            "outputs": [{
+                "contains": "Enter the Time T23:00:00+05:30\n"
+                    },
+					{
+                "contains": "Enter Date\n"
+                    }
+                    ]
+        }
+		]
+		},
+		{
+            "discardBefore":true,
+                 "name": "TestCase 77- Checking NextIntent transition at confirmation node",
+                 "messages": [{
+                       "input": "CheckConfirmation",
+                       "outputs": [{
+                   "contains": "Enter Airport\n"
+                       }]
+           },
+           {
+            "input": "PPV",
+            "outputs": [{
+                "contains": "PPV"
+                    },
+					{
+                "contains": "Select one\n"
+                    }
+                    ]
+        },
+		{
+            "input": "Subintent5",
+            "outputs": [{
+                "contains": "Colour entered is red\n"
+                    }
+                    ]
+        }
+		]
+		},
+		{
+            "discardBefore":true,
+                 "name": "TestCase 78- At confirmation node checking transition based on yes condition which is transiting to Entity node ",
+                 "messages": [{
+                       "input": "CheckConfirmation",
+                       "outputs": [{
+                   "contains": "Enter Airport\n"
+                       }]
+           },
+           {
+            "input": "HYD",
+            "outputs": [{
+                "contains": "HYD"
+                    },
+					{
+                "contains": "Select one\n"
+                    }
+                    ]
+        },
+		{
+            "input": "yes",
+            "outputs": [{
+                "contains": "Enter currency\n"
+                    }
+                    ]
+        },
+		{
+            "input": "100 USD",
+            "outputs": [{
+                "contains": "Code of currency USD Amount is 100\n"
+                    }
+                    ]
+        }
+		]
+		},
+		{
+            "discardBefore":true,
+                 "name": "TestCase 79- At confirmation node checking transition based on no condition which is transiting to External dialog",
+                 "messages": [{
+                       "input": "CheckConfirmation",
+                       "outputs": [{
+                   "contains": "Enter Airport\n"
+                       }]
+           },
+           {
+            "input": "HYD",
+            "outputs": [{
+                "contains": "HYD"
+                    },
+					{
+                "contains": "Select one\n"
+                    }
+                    ]
+        },
+		{
+            "input": "no",
+            "outputs": [{
+                "contains": "Enter Time\n"
+                    }
+                    ]
+        },
+		{
+            "input": "6 pm",
+            "outputs": [{
+                "contains": "Enter the Time T18:00:00+05:30\n"
+                    }
+                    ]
+        }
+		]
+		},
+		{
+            "discardBefore":true,
+                 "name": "TestCase 80 - At confiamtion node, checking the transition based on else condition ",
+                 "messages": [{
+                       "input": "CheckConfirmation",
+                       "outputs": [{
+                   "contains": "Enter Airport\n"
+                       }]
+           },
+           {
+            "input": "HYD",
+            "outputs": [{
+                "contains": "HYD"
+                    },
+					{
+                "contains": "Select one\n"
+                    }
+                    ]
+        },
+		{
+            "input": "ftguyhi",
+            "outputs": [{
+                "contains": "Message node for else condition\n"
+                    }
+                    ]
+        }
+		]
+		},
+		{
+            "discardBefore":true,
+                 "name": "TestCase 81- Checking nextintent transition at Entity node",
+                 "messages": [{
+                       "input": "CheckEntity",
+                       "outputs": [{
+                   "contains": "Enter color\n"
+                       }]
+           },
+           {
+            "input": "Subintent6",
+            "outputs": [{
+                "contains": "message node for Subintent\n"
+                    }
+                    ]
+        }
+		]
+		},
+		{
+            "discardBefore":true,
+                 "name": "TestCase 82- Auto transition from confirmation node to Entity, when conditional operator is set to (Context.entities.Entityname)",
+                 "messages": [{
+                       "input": "CheckEntity",
+                       "outputs": [{
+                   "contains": "Enter color\n"
+                       }]
+           },
+           {
+            "input": "pink",
+            "outputs": [{
+                "contains": "Enter Currency\n"
+                    }
+                    ]
+        },
+		{
+            "input": "100 USD",
+            "outputs": [{
+                "contains": "Code of currency USD Amount is 100\n"
+                    }
+                    ]
+        }
+		]
+		},
+		{
+            "discardBefore":true,
+                 "name": "TestCase 83- Auto transition from confirmation node to External dialog, when conditional operator is set to (entities.Entityname)",
+                 "messages": [{
+                       "input": "CheckEntity",
+                       "outputs": [{
+                   "contains": "Enter color\n"
+                       }]
+           },
+           {
+            "input": "Blue",
+            "outputs": [{
+                "contains": "Enter Time\n"
+                    }
+                    ]
+        },
+		{
+            "input": "7 pm",
+            "outputs": [{
+                "contains": "Enter the Time T19:00:00+05:30\n"
+                    }
+                    ]
+        }
+		]
+		},
+		{
+            "discardBefore":true,
+                 "name": "TestCase 84- At Entity node , Checking transition based on else condition",
+                 "messages": [{
+                       "input": "CheckEntity",
+                       "outputs": [{
+                   "contains": "Enter color\n"
+                       }]
+           },
+           {
+            "input": "Red",
+            "outputs": [{
+                "contains": "Message node for end transition\n"
+                    }
+                    ]
+        }
+		]
+		},
+		{
+            "discardBefore":true,
+                 "name": "TestCase 85-Checking the Loop limit for optional Entity",
+                 "messages": [{
+                       "input": "LoopTest",
+                       "outputs": [{
+                   "contains": "Enter Value\n"
+                       }]
+           },
+           {
+            "input": "selection of fruits",
+            "outputs": [{
+                "contains": "Navigate back to color\n"
+                    },
+					{
+                "contains": "Enter Value\n"
+                    }
+                    ]
+        },
+		{
+            "input": "selection of fruits",
+            "outputs": [{
+                "contains": "Navigate back to color\n"
+                    },
+					{
+                "contains": "Enter Value\n"
+                    }
+                    ]
+        },
+		{
+            "input": "selection of fruits",
+            "outputs": [{
+                "contains": "Navigate back to color\n"
+                    },
+					{
+                "contains": "Enter Value\n"
+                    }
+                    ]
+        },
+		{
+            "input": "selection of fruits",
+            "outputs": [{
+                "contains": "Navigate back to color\n"
+                    },
+					{
+                "contains": "Enter Value\n"
+                    }
+                    ]
+        },
+		{
+            "input": "selection of fruits",
+            "outputs": [{
+                "contains": "Navigate back to color\n"
+                    },
+					{
+                "contains": "Enter Value\n"
+                    }
+                    ]
+        },
+		{
+            "input": "selection of fruits",
+            "outputs": [{
+                "contains": "Navigate back to color\n"
+                    },
+					{
+                "contains": "Enter Value\n"
+                    }
+                    ]
+        },
+		{
+            "input": "selection of fruits",
+            "outputs": [{
+                "contains": "Navigate back to color\n"
+                    },
+					{
+                "contains": "Enter Value\n"
+                    }
+                    ]
+        },
+		{
+            "input": "selection of fruits",
+            "outputs": [{
+                "contains": "Navigate back to color\n"
+                    },
+					{
+                "contains": "Enter Value\n"
+                    }
+                    ]
+        },
+		{
+            "input": "selection of fruits",
+            "outputs": [{
+                "contains": "Navigate back to color\n"
+                    },
+					{
+                "contains": "Enter Value\n"
+                    }
+                    ]
+        },
+		{
+            "input": "selection of fruits",
+            "outputs": [{
+                "contains": "Navigate back to color\n"
+                    },
+					{
+                "contains": "Enter Value\n"
+                    }
+                    ]
+        },
+		{
+            "input": "selection of fruits",
+            "outputs": [{
+                "contains": "Navigate back to color\n"
+                    },
+					{
+                "contains": "Enter Value\n"
+                    }
+                    ]
+        },
+		{
+            "input": "selection of fruits",
+            "outputs": [{
+                "contains": "Navigate back to color\n"
+                    },
+					{
+                "contains": "Enter Value\n"
+                    }
+                    ]
+        },
+		{
+            "input": "selection of fruits",
+            "outputs": [{
+                "contains": "Navigate back to color\n"
+                    },
+					{
+                "contains": "Enter Value\n"
+                    }
+                    ]
+        },
+		{
+            "input": "selection of fruits",
+            "outputs": [{
+                "contains": "Navigate back to color\n"
+                    },
+					{
+                "contains": "Enter Value\n"
+                    }
+                    ]
+        },
+		{
+            "input": "discard all",
+            "outputs": [{
+                "contains": "Ok, I am discarding the task for now. We can start over whenever you are ready. \n"
+                    }
+                    ]
+        }
+		]
+		},
+		   {
+            "discardBefore":true,
+                 "name": "TestCase 86- Checking the ML utterances for Published task",
+                 "messages": [
+		{
+            "input": "Development tasks are completed",
+            "outputs": [{
+                "contains": "This is a upgrade version of Publish task\n"
+                    }
+                    ]
+        },
+		{
+            "input": "Mark the activity for review",
+            "outputs": [{
+                "contains": "This is a upgrade version of Publish task\n"
+                    }
+                    ]
+        }
+		]
+		}
+     ]
+}
+				

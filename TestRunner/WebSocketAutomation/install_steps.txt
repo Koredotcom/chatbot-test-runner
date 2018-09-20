@@ -1,0 +1,21 @@
+Installation steps
+==================================
+1.Install python3 (While installing please select the option add to env variables as this installs pip)
+
+2.pip install virtualenv
+
+3.cd <Path of the automation folder> [ This will change to path to location where the automation files are placed ]
+
+4.virtualenv ./venv 
+
+5."./venv/Scripts/activate.bat"
+
+6.pip install -r requirements.txt
+
+To run the application type the following command.
+=============================
+1."./venv/Scripts/activate.bat"
+
+2. python test.py
+
+Note : If user wants to rerun the program again, then the first step is not required. In case the command window is closed, then to run again the program in cmd, user has to follow the two steps as mentioned above.
