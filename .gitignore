@@ -1,0 +1,12 @@
+*.index
+*.snap
+*.tree
+*.resources
+*.prefs
+*.csv
+*.class
+*.dat
+WebSocketAutomation/venv/
+*.pyc
+*._*
+WebSocketAutomation/test.log
