@@ -93,7 +93,7 @@ Configure the following settings to execute the Chatbot Test Runner:
         3. Click the Talk to Bot icon at the right-bottom of the bot window to open the chat.
 
         4. On the developer console of Chrome, click Network > XHR > Start. When you scroll down the details as shown in the following image, you can see the bearer token with authorization as the heading. Copy the code and exclude the word bearer. 
-![image alt text](image_3.png)
+![image alt text](https://github.com/Koredotcom/chatbot-test-runner/blob/master/image_3.png)
 
     * **Builder**: Enter **true** if you want to test both configured and published tasks. To test only the published task, set this value to **false**. Setting it to false improves the performance as the tool only checks the published tasks. 
 
