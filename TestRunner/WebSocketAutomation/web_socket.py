@@ -57,7 +57,7 @@ class WebSocketClient( object ):
 			result =  self.ws.recv()
 			#print(result)
 			messageJson = json.loads(result)
-			if messageJson["type"] == 'bot_response' :
+			if messageJson["type"] == 'bot_response' and messageJson.get("message"):
 				i = i+1
 				if len(messageJson["message"]) > 0:
 					responses.append(messageJson["message"][0])
@@ -84,7 +84,7 @@ class WebSocketClient( object ):
 		result =  self.ws.recv()
   #	  print(result)
 		messageJson = json.loads(result)
-		if messageJson["type"] == 'bot_response' :
+		if messageJson["type"] == 'bot_response' and messageJson.get("message"):
 			if len(messageJson["message"]) > 0:
 				return messageJson["message"][0]["cInfo"]["body"]
 			return ""
