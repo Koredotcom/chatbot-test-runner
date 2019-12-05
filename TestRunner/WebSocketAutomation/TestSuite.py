@@ -38,7 +38,7 @@ class TestSuite( object ):
 			self.botName = data["botName"]
 			self.botId = data["botId"]
 			self.testCases = data["testCases"]
-			self.welcomeMessageCount = data.get("welcomeMessageCount", 0)
+			self.welcomeMessageCount = int(data.get("welcomeMessageCount", 0))
 			self.discardMessage = data.get("discardMessage","discard all")
 
 	def __start(self):
@@ -188,7 +188,7 @@ class TestSuite( object ):
 		return self.bot
 	
 	def __startConnection(self):
-		socket = WebSocketClient(self.__getWSSUrl(), self.botId, self.botName)
+		socket = WebSocketClient(self.__getWSSUrl(), self.botId, self.botName, self.welcomeMessageCount)
 		socket.connect()
 		return socket
 		
