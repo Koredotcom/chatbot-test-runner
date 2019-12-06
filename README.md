@@ -97,10 +97,70 @@ Configure the following settings to execute the Chatbot Test Runner:
 
     * **Builder**: Enter **true** if you want to test both configured and published tasks. To test only the published task, set this value to **false**. Setting it to false improves the performance as the tool only checks the published tasks. 
 
-* **Customize TestScript files**: In the TestScripts folder(*chatbot-test-runner-master\TestRunner\WebSocketAutomation\TestSuites\TestScripts*), customize the test cases to add the following validation attributes: 
+* **Customize TestScript files**: In the TestScripts folder(*chatbot-test-runner-master\TestRunner\WebSocketAutomation\TestSuites*), customize the test cases to add the following validation attributes: 
   * **Contains:** To just validate whether the bot response contains the mentioned response
+ ```json
+ {
+      "name": "Example for contains - Validation of Acknowledgment ",
+      "messages": [
+        {
+          "input": "Thank you",
+          "outputs": [
+            {
+              "contains": "You're welcome."
+            }]
+        }]
+    }
+ ```   
   * **Contains allOf :** Whenever response is rendered in the form of templates such as Button or Quick replies, use allOf to capture prompt as well as the text of the options
+```json
+{
+      "name": "Examples for allOf TestCase:Checking List of values with ambiguity",
+      "messages": [
+        {
+          "input": "Transfer money to card",
+          "outputs": [
+            {
+              "contains": {
+                "allOf": [
+                  "This query returned more than one element. Please tell me which one you meant.\n",
+                  "Debit Card",
+                  "Credit card",
+                  "ATM card"
+                ]
+              }
+            }]
+        },
+        {
+          "input": "Credit card",
+          "outputs": [
+            {
+              "contains": "money transfer successful to credit card "
+            }]
+        }]
+    }
+  ```
   * **Contains OneOf :** In case of a dynamic response use OneOf in JSON to capture all the possible responses. Thus presence of either one response will pass the test case
+```json
+{
+      "name": "Example for oneOf Test case:Validation of Greetings",
+      "messages": [
+        {
+          "input": "Hi",
+          "outputs": [
+            {
+              "contains": {
+                "oneOf": [
+                  "Hi!",
+                  "Hello",
+                  "Hi there!",
+                  "Hey"
+                ]
+              }
+            }]
+        }]
+    }
+```
 
 * **Enter the names of the test suites to execute in the current run**: In the TestSuite.JSON file *(\chatbot-test-runner-master\TestRunner\WebSocketAutomation\TestSuite.json*), enter the names of the test suite files to be executed in this run. These files should be uploaded in the TestSuite folder to get executed. Enter the name as follows:
 
