@@ -58,7 +58,7 @@ You need to edit the following files in the Chatbot Test Runner folder:
   </tr>
   <tr>
     <td>Test_Config</td>
-    <td>Enter the host address, bearer token, and other configuration details in this file</td>
+    <td>Enter the host address, auth credentials - either bearer token or username-password combination, and other configuration details in this file. Note that the host address and auth credentials are mandatory fields.</td>
   </tr>
   <tr>
     <td>TestSuites(file)</td>
@@ -84,7 +84,7 @@ Configure the following settings to execute the Chatbot Test Runner:
 
     * **Host:** Enter the URL of your Bot Builder instance, for example, https://bots.kore.ai
 
-    * **AuthToken**: Enter the bearer token for bot authentication. Follow these steps to find the bearer token from the bot builder:
+    * **AuthToken**: Enter the bearer token or username password for bot authentication. Follow these steps to find the bearer token from the bot builder:
 
         1. Open the bot that you want to test in Google Chrome.
 
@@ -96,6 +96,11 @@ Configure the following settings to execute the Chatbot Test Runner:
 ![image alt text](https://github.com/Koredotcom/chatbot-test-runner/blob/master/image_3.png)
 
     * **Builder**: Enter **true** if you want to test both configured and published tasks. To test only the published task, set this value to **false**. Setting it to false improves the performance as the tool only checks the published tasks. 
+
+* **Customize TestScript files**: In the TestScripts folder(*chatbot-test-runner-master\TestRunner\WebSocketAutomation\TestSuites\TestScripts*), customize the test cases to add the following validation attributes: 
+  * **Contains:** To just validate whether the bot response contains the mentioned response
+  * **Contains allOf :** Whenever response is rendered in the form of templates such as Button or Quick replies, use allOf to capture prompt as well as the text of the options
+  * **Contains OneOf :** In case of a dynamic response use OneOf in JSON to capture all the possible responses. Thus presence of either one response will pass the test case
 
 * **Enter the names of the test suites to execute in the current run**: In the TestSuite.JSON file *(\chatbot-test-runner-master\TestRunner\WebSocketAutomation\TestSuite.json*), enter the names of the test suite files to be executed in this run. These files should be uploaded in the TestSuite folder to get executed. Enter the name as follows:
 
