@@ -191,9 +191,6 @@ Configure the following settings to execute the Chatbot Test Runner:
             }
           ]
 },
--
--
-}
 ```
 
   * **Welcome Message** : If the bot has predefined welcome messages, then update its count in test cases file for the parameter **"welcomeMessageCount"** as mentioned below
