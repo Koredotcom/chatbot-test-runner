@@ -193,7 +193,8 @@ Configure the following settings to execute the Chatbot Test Runner:
 },
 ```
 
-  * **Welcome Message** : If the bot has predefined welcome messages, then update its count in test cases file for the parameter **"welcomeMessageCount"** as mentioned below
+  * **Welcome Message** : If the bot has predefined welcome messages, then update its count in test cases file for the parameter **"welcomeMessageCount"** as mentioned below. 
+  In the below format welcome message count represents the number of welcome messages in the bot
   ```json	
  "botName": "Name of the bot",
  "botId": "stream ID of the bot",
@@ -211,7 +212,7 @@ Configure the following settings to execute the Chatbot Test Runner:
           ]
 },
 
-In the above format welcome message count represents the number of welcome messages in the bot
+
 ```
 
 
