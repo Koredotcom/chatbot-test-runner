@@ -94,8 +94,10 @@ Configure the following settings to execute the Chatbot Test Runner:
 
         4. On the developer console of Chrome, click Network > XHR > Start. When you scroll down the details as shown in the following image, you can see the bearer token with authorization as the heading. Copy the code and exclude the word bearer. 
 ![image alt text](https://github.com/Koredotcom/chatbot-test-runner/blob/master/image_3.png)
+ **Note** : In case if auth token is not being used/mentioned for authentication then enter user name and password details for "user_name" and "password" parameters in Test Config file.
 
-    * **Builder**: Enter **true** if you want to test both configured and published tasks. To test only the published task, set this value to **false**. Setting it to false improves the performance as the tool only checks the published tasks. 
+
+   * **Builder**: Enter **true** if you want to test both configured and published tasks. To test only the published task, set this value to **false**. Setting it to false improves the performance as the tool only checks the published tasks. 
 
 * **Customize TestScript files**: In the TestScripts folder(*chatbot-test-runner-master\TestRunner\WebSocketAutomation\TestSuites*), customize the test cases to add the following validation attributes: 
   * **Contains:** To just validate whether the bot response contains the mentioned response
@@ -112,7 +114,7 @@ Configure the following settings to execute the Chatbot Test Runner:
         }]
     }
  ```   
-  * **Contains allOf :** Whenever response is rendered in the form of templates such as Button or Quick replies, use allOf to capture prompt as well as the text of the options
+   * **Contains allOf:** Whenever response is rendered in the form of templates such as Button or Quick replies, use allOf to capture prompt as well as the text of the options
 ```json
 {
       "name": "Examples for allOf TestCase:Checking List of values with ambiguity",
@@ -140,7 +142,7 @@ Configure the following settings to execute the Chatbot Test Runner:
         }]
     }
   ```
-  * **Contains OneOf :** In case of a dynamic response use OneOf in JSON to capture all the possible responses. Thus presence of either one response will pass the test case
+   * **Contains OneOf :** In case of a dynamic response use OneOf in JSON to capture all the possible responses. Thus presence of either one response will pass the test case
 ```json
 {
       "name": "Example for oneOf Test case:Validation of Greetings",
@@ -161,20 +163,72 @@ Configure the following settings to execute the Chatbot Test Runner:
         }]
     }
 ```
+  * **Sample Test Case Format** : To prepare Test scripts , each test case has to be written in below format with bot id and bot name being mentioned at the beginning of the file. The bot developer can use validation attirbutes such "contains" , "allOf", "oneOf" etc according to requirement of each test case.
+  
+  ```json	
+ "botName": "Name of the bot",
+ "botId": "stream ID of the bot",
+
+{
+      "name": "Test Case Name",
+      "messages": [
+        {
+          "input": "User input to Bot",
+          "outputs": [
+            {
+              "contains": "Expected Bot Response"
+            }
+          ]
+},
+{
+      "name": "Test Case Name 2",
+      "messages": [
+        {
+          "input": "User input to Bot",
+          "outputs": [
+            {
+              "contains": "Expected Bot Response"
+            }
+          ]
+},
+-
+-
+}
+```
+
+  * **Welcome Message** : If the bot has predefined welcome messages, then update its count in test cases file for the parameter **"welcomeMessageCount"** as mentioned below
+  ```json	
+ "botName": "Name of the bot",
+ "botId": "stream ID of the bot",
+ "welcomeMessageCount" : "1"
+
+{
+      "name": "Test Case Name",
+      "messages": [
+        {
+          "input": "User input to Bot",
+          "outputs": [
+            {
+              "contains": "Expected Bot Response"
+            }
+          ]
+},
+
+In the above format welcome message count represents the number of welcome messages in the bot
+```
+
 
 * **Enter the names of the test suites to execute in the current run**: In the TestSuite.JSON file *(\chatbot-test-runner-master\TestRunner\WebSocketAutomation\TestSuite.json*), enter the names of the test suite files to be executed in this run. These files should be uploaded in the TestSuite folder to get executed. Enter the name as follows:
 
-<table>
-  <tr>
-    <td>{
+```json
+{
     "testCases":[
         "TestSuite1",
         "TestSuite2"
     ]
 }
-</td>
-  </tr>
-</table>
+
+```
 
 
 * **Execute the Test Run**: Double-click the **install_window** batch file. Once the file completes initialization, type the following command:
