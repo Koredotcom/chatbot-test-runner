@@ -141,8 +141,8 @@ Configure the following settings to execute the Chatbot Test Runner:
                 }]
             }]
         }
-      ```
-   * **Contains OneOf :** In case of a dynamic response use OneOf in JSON to capture all the possible responses. Thus presence of either one response will pass the test case
+    ```
+  * **Contains OneOf :** In case of a dynamic response use OneOf in JSON to capture all the possible responses. Thus presence of either one response will pass the test case
     ```json
     {
           "name": "Example for oneOf Test case:Validation of Greetings",
@@ -163,9 +163,9 @@ Configure the following settings to execute the Chatbot Test Runner:
             }]
         }
     ```
-  * **Sample Test Case Format** : To prepare Test scripts , each test case has to be written in below format with bot id and bot name being mentioned at the beginning of the file. The bot developer can use validation attirbutes such "contains" , "allOf", "oneOf" etc according to requirement of each test case.
+* **Sample Test Case Format** : To prepare Test scripts , each test case has to be written in below format with bot id and bot name being mentioned at the beginning of the file. The bot developer can use validation attributes such "contains" , "allOf", "oneOf" etc according to requirement of each test case.
   
-      ```json	
+  ```json	
      "botName": "Name of the bot",
      "botId": "stream ID of the bot",
 
@@ -191,16 +191,15 @@ Configure the following settings to execute the Chatbot Test Runner:
                 }
               ]
     },
-    ```
+  ```
 
-  * **Welcome Message** : If the bot has predefined welcome messages, then update its count in test cases file for the parameter **"welcomeMessageCount"** as mentioned below. 
-  In the below format welcome message count represents the number of welcome messages in the bot
+* **Welcome Message** : If the bot has predefined welcome messages, then update the welcome message count in test cases file for the parameter **"welcomeMessageCount"** as mentioned below. 
   ```json	
- "botName": "Name of the bot",
- "botId": "stream ID of the bot",
- "welcomeMessageCount" : "1"
+  "botName": "Name of the bot",
+  "botId": "stream ID of the bot",
+  "welcomeMessageCount" : "1"
 
-{
+  {
       "name": "Test Case Name",
       "messages": [
         {
@@ -210,23 +209,22 @@ Configure the following settings to execute the Chatbot Test Runner:
               "contains": "Expected Bot Response"
             }
           ]
-},
+  },
 
 
-```
+  ```
 
 
 * **Enter the names of the test suites to execute in the current run**: In the TestSuite.JSON file *(\chatbot-test-runner-master\TestRunner\WebSocketAutomation\TestSuite.json*), enter the names of the test suite files to be executed in this run. These files should be uploaded in the TestSuite folder to get executed. Enter the name as follows:
+  ```json
+  {
+      "testCases":[
+          "TestSuite1",
+          "TestSuite2"
+      ]
+  }
 
-```json
-{
-    "testCases":[
-        "TestSuite1",
-        "TestSuite2"
-    ]
-}
-
-```
+  ```
 
 
 * **Execute the Test Run**: Double-click the **install_window** batch file. Once the file completes initialization, type the following command:
