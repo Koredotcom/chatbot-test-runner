@@ -101,97 +101,97 @@ Configure the following settings to execute the Chatbot Test Runner:
 
 * **Customize TestScript files**: In the TestScripts folder(*chatbot-test-runner-master\TestRunner\WebSocketAutomation\TestSuites*), customize the test cases to add the following validation attributes: 
   * **Contains:** To just validate whether the bot response contains the mentioned response
- ```json
- {
-      "name": "Example for contains - Validation of Acknowledgment ",
-      "messages": [
-        {
-          "input": "Thank you",
-          "outputs": [
+    ```json
+    {
+          "name": "Example for contains - Validation of Acknowledgment ",
+          "messages": [
             {
-              "contains": "You're welcome."
-            }]
-        }]
-    }
- ```   
+              "input": "Thank you",
+              "outputs": [
+               {
+                  "contains": "You're welcome."
+               }]
+           }]
+        }
+    ```   
    * **Contains allOf:** Whenever response is rendered in the form of templates such as Button or Quick replies, use allOf to capture prompt as well as the text of the options
-```json
-{
-      "name": "Examples for allOf TestCase:Checking List of values with ambiguity",
-      "messages": [
-        {
-          "input": "Transfer money to card",
-          "outputs": [
+    ```json
+    {
+          "name": "Examples for allOf TestCase:Checking List of values with ambiguity",
+          "messages": [
             {
-              "contains": {
-                "allOf": [
-                  "This query returned more than one element. Please tell me which one you meant.\n",
-                  "Debit Card",
-                  "Credit card",
-                  "ATM card"
-                ]
-              }
+              "input": "Transfer money to card",
+              "outputs": [
+                {
+                  "contains": {
+                    "allOf": [
+                      "This query returned more than one element. Please tell me which one you meant.\n",
+                      "Debit Card",
+                      "Credit card",
+                      "ATM card"
+                   ]
+                  }
+                }]
+           },
+           {
+              "input": "Credit card",
+              "outputs": [
+                {
+                 "contains": "money transfer successful to credit card "
+                }]
             }]
-        },
-        {
-          "input": "Credit card",
-          "outputs": [
-            {
-              "contains": "money transfer successful to credit card "
-            }]
-        }]
-    }
-  ```
+        }
+      ```
    * **Contains OneOf :** In case of a dynamic response use OneOf in JSON to capture all the possible responses. Thus presence of either one response will pass the test case
-```json
-{
-      "name": "Example for oneOf Test case:Validation of Greetings",
-      "messages": [
-        {
-          "input": "Hi",
-          "outputs": [
+    ```json
+    {
+          "name": "Example for oneOf Test case:Validation of Greetings",
+          "messages": [
             {
-              "contains": {
-                "oneOf": [
-                  "Hi!",
-                  "Hello",
-                  "Hi there!",
-                  "Hey"
-                ]
-              }
+              "input": "Hi",
+              "outputs": [
+                {
+                  "contains": {
+                    "oneOf": [
+                      "Hi!",
+                      "Hello",
+                      "Hi there!",
+                      "Hey"
+                        ]
+                  }
+                }]
             }]
-        }]
-    }
-```
+        }
+    ```
   * **Sample Test Case Format** : To prepare Test scripts , each test case has to be written in below format with bot id and bot name being mentioned at the beginning of the file. The bot developer can use validation attirbutes such "contains" , "allOf", "oneOf" etc according to requirement of each test case.
   
-  ```json	
- "botName": "Name of the bot",
- "botId": "stream ID of the bot",
+      ```json	
+     "botName": "Name of the bot",
+     "botId": "stream ID of the bot",
 
-{
-      "name": "Test Case Name",
-      "messages": [
-        {
-          "input": "User input to Bot",
-          "outputs": [
+    {
+          "name": "Test Case Name",
+          "messages": [
             {
-              "contains": "Expected Bot Response"
-            }
-          ]
-},
-{
-      "name": "Test Case Name 2",
-      "messages": [
-        {
-          "input": "User input to Bot",
-          "outputs": [
+              "input": "User input to Bot",
+              "outputs": [
+                {
+                  "contains": "Expected Bot Response"
+                }
+              ]
+    },
+    {
+          "name": "Test Case Name 2",
+          "messages": [
             {
-              "contains": "Expected Bot Response"
-            }
-          ]
-},
-```
+              "input": "User input to Bot",
+              "outputs": [
+                {
+                  "contains": "Expected Bot Response"
+                }
+              ]
+    },
+    ```
 
   * **Welcome Message** : If the bot has predefined welcome messages, then update its count in test cases file for the parameter **"welcomeMessageCount"** as mentioned below. 
   In the below format welcome message count represents the number of welcome messages in the bot
